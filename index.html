@@ -476,7 +476,9 @@
       }
 
       .contact-box,
-      .form-box {
+      .form-box,
+      .spotlight-card,
+      .value-card {
         background: rgba(255,255,255,0.02);
         border: 1px solid var(--line);
         border-radius: 22px;
@@ -519,6 +521,30 @@
         resize: vertical;
       }
 
+      .spotlight-grid, .value-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .spotlight-card .badge {
+        display: inline-block;
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold-soft);
+        margin-bottom: 12px;
+      }
+
+      .spotlight-card h3, .value-card h3 {
+        margin: 0 0 10px;
+      }
+
+      .spotlight-card p, .value-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
       .site-footer {
         padding: 26px 0 34px;
         color: var(--muted);
@@ -536,7 +562,9 @@
         .hero-grid,
         .contact-grid,
         .grid-3,
-        .news-grid {
+        .news-grid,
+        .spotlight-grid,
+        .value-grid {
           grid-template-columns: 1fr;
         }
 
@@ -867,6 +895,32 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      <section style="padding-top: 0;">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-tag">Why Choose Us</span>
+              <h2>Built around the community.</h2>
+            </div>
+          </div>
+
+          <div class="value-grid">
+            <article class="value-card">
+              <h3>Leadership</h3>
+              <p>Clear communication, strong structure, and a focus on growth from day one.</p>
+            </article>
+            <article class="value-card">
+              <h3>Trust</h3>
+              <p>A professional presentation that makes supporters feel confident in the platform.</p>
+            </article>
+            <article class="value-card">
+              <h3>Passion</h3>
+              <p>Everything is designed to bring energy, excitement, and pride to the league experience.</p>
+            </article>
           </div>
         </div>
       </section>
